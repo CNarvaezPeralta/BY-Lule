@@ -79,7 +79,9 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #d69c7c;
+    background-color: #d59f83;
+    cursor: pointer;
+    
 }
 
 

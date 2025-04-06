@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuentes importadas */
+/* font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rasa:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet');
+/* font Playfair Display */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rasa:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet');
+/* font karla */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rasa:ital,wght@0,300..700;1,300..700&display=swap');
+
+/* Estilos de la barra de navegacion */
+.navbar {
+    background-color: #F6E6D6;
+    font-family: Poppins;
+
+
+}
+
+/* Hacer que el navbar ocupe todo el ancho y use flexbox */
+.navbar-collapse {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Asegurar que los elementos de navegación estén centrados */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FAF8F3;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sección hero */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.titulo {
+    font-family: playfair display;
+    font-size: 42px;
+    color: #D68C63;
+    font-weight: bold;
+}
+
+/* Carrusel */
+.carousel-container {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+/* Botón de llamada a la acción */
+.call-to-action {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.btn-primary {
+    background-color: #D68C63;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #d69c7c;
+}
+
+
+/* Contenedor del contenido */
+main {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+}
+
+/* Sección con imagen y texto */
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+/* Imágenes */
+.section img {
+    width: 40%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de texto */
+.text {
+    width: 50%;
+}
+
+/* Invertir orden en la segunda sección */
+.section .reverse {
+    flex-direction: row-reverse;
+}
+
+/* Estilos de los títulos y párrafos */
+h2 {
+    color: #D68C63;
+    font-family: playfair display;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+h3 {
+    color: #D68C63;
+    font-family: playfair display;
+    font-size: 28px;
+}
+
+p {
+    color: #7b7979;
+    font-family: karla;
+    line-height: 1.6;
+}
+
+.titulo-productos {
+    text-align: center;
+
+}
+
+/* Dispocision y estilos apartado de productos */
+.bolsos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bolso {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bolso img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.bolso .precio {
+    font-weight: bold;
+    color: #8B9E7B;
+    font-size: 1.2rem;
+}
+
+/* Disposision y estilos del apartado coleccion */
+
+.bolsos-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bolso {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bolso img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.precio {
+    font-weight: bold;
+    color: #d9534f;
+}
+
+/* Estilos contacto */
+
+.contacto-main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.titulo-contacto {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.texto-contacto {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Estilos del formulario */
+.contacto {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contacto label {
+    font-weight: bold;
+    text-align: left;
+}
+
+.contacto input,
+.contacto textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contacto button {
+    background-color: #D68C63;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contacto button:hover {
+    background-color: #d69c7c;
+}
+
+/* Estilos FAQ */
+/* Seccion principal */
+.faq-main {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.faq-title {
+    margin-bottom: 30px;
+}
+
+/* Contenedor de preguntas */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Estilos para cada pregunta */
+.faq-item {
+    width: 80%;
+    text-align: center;
+    padding-bottom: 15px;
+
+}
+
+
+.faq-item h3 {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+
+.faq-item p {
+    text-align: center;
+    width: 100%;
+}
+
+/* Enlaces dentro de las respuestas */
+.faq-item a {
+    color: #D68C63;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.faq-item a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos footer */
+.footer {
+    background-color: #F6E6D6;
+    text-align: center;
+    padding: 20px;
+    font-family: "Karla", sans-serif;
+    color: #7b7979;
+    font-size: 16px;
+}
+
+.iconos {
+    display: flex;
+    justify-content: center;
+    /* Centra los iconos */
+    gap: 15px;
+    /* Espaciado entre iconos */
+}
+
+.iconos a img {
+    width: 30px;
+    /* Tamaño de los iconos */
+    height: auto;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.iconos a img:hover {
+    transform: scale(1.1);
+    /* Efecto de agrandado */
+}
+
+/* Media para tablet */
+@media (min-width: 768px) {
+    .section {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .reverse {
+        flex-direction: row-reverse;
+    }
+
+    .section img {
+        width: 45%;
+    }
+
+    .text {
+        width: 50%;
+    }
+
+    .bolsos-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+    }
+
+    .contacto-main, .faq-main {
+        width: 70%;
+    }
+}
+
+/* Media pantalla grandes */
+@media (min-width: 1024px) {
+    .bolsos-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en desktop */
+    }
+
+    .contacto-main, .faq-main {
+        width: 50%;
+    }
+}

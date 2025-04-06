@@ -1,0 +1,20 @@
+// Estilos de la barra de navegación
+.navbar {
+    background-color: #F6E6D6;
+    font-family: Poppins;
+}
+
+// Hacer que el navbar ocupe todo el ancho y use flexbox
+.navbar-collapse {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+// Asegurar que los elementos de navegación estén centrados
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}

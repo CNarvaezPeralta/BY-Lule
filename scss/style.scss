@@ -1,0 +1,25 @@
+
+/* Temas y fuentes */
+@use 'temas/fuentes';
+
+/* Variables */
+@use 'temas/variables';
+
+/* Estilos generales */
+@use 'generales/reset';
+@use 'generales/tipografia';
+@use 'generales/media';
+
+/* Estructura del sitio */
+@use 'estructura/header';
+@use 'estructura/hero';
+@use 'estructura/footer';
+
+/* Componentes */
+@use 'componentes/botones';
+@use 'componentes/faq';
+@use 'componentes/formulario';
+
+/* Estilos por página */
+@use 'paginas/inicio';
+@use 'paginas/contacto';

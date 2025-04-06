@@ -1,0 +1,40 @@
+// Media para tablet
+@media (min-width: 768px) {
+    .section {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .reverse {
+        flex-direction: row-reverse;
+    }
+
+    .section img {
+        width: 45%;
+    }
+
+    .text {
+        width: 50%;
+    }
+
+    .bolsos-container {
+        grid-template-columns: repeat(2, 1fr); // 2 columnas en tablet
+    }
+
+    .contacto-main,
+    .faq-main {
+        width: 70%;
+    }
+}
+
+// Media pantalla grandes
+@media (min-width: 1024px) {
+    .bolsos-container {
+        grid-template-columns: repeat(3, 1fr); // 3 columnas en desktop
+    }
+
+    .contacto-main,
+    .faq-main {
+        width: 50%;
+    }
+}

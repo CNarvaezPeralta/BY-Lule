@@ -1,74 +1,21 @@
-/* Contenedor del contenido */
-main {
+@use '../temas/variables' as v;
+@use '../temas/mixins' as m;
+
+// ===================== INICIO =====================
+
+// Contenedor del carrusel de imágenes
+.carousel-container {
     width: 80%;
     margin: auto;
-    padding: 50px 0;
+    padding-bottom: 50px;
 }
 
-// Sección con imagen y texto
-.section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    margin-bottom: 50px;
-}
-
-// Imágenes
-.section img {
-    width: 40%;
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-// Contenedor de texto
-.text {
-    width: 50%;
-}
-
-// Invertir orden en la segunda sección
-.section .reverse {
-    flex-direction: row-reverse;
-}
-
-.titulo-productos {
+// Sección de llamado a la acción (CTA)
+.call-to-action {
     text-align: center;
-}
+    margin: 50px 0;
 
-// Disposición y estilos apartado de productos
-.bolsos-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, auto);
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.bolso {
-    background: #fff;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.bolso img {
-    width: 100%;
-    max-height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.bolso img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-.precio {
-    font-weight: bold;
-    color: #d9534f;
+    a {
+        @include m.btn-style(v.$color-principal, v.$color-acento);
+    }
 }

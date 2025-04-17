@@ -1,0 +1,31 @@
+// ===================== MIXINS =====================
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin btn-style($bg-color, $hover-color) {
+    background-color: $bg-color;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+
+@mixin responsive-text($mobile-size, $desktop-size) {
+    font-size: $mobile-size;
+
+    @media (min-width: 768px) {
+        font-size: $desktop-size;
+    }
+}

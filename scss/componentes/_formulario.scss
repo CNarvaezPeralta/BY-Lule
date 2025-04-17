@@ -1,40 +1,71 @@
-// Estilos del formulario
-.contacto {
-    background-color: #f9f9f9;
+@use '../temas/variables' as v;
+
+// ===================== FORMULARIO =====================
+
+.contacto-main {
+    max-width: 600px;
+    margin: 0 auto;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    text-align: center;
 
-.contacto form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+    // Título principal de contacto
+    .titulo-contacto {
+        font-size: 24px;
+        margin-bottom: 10px;
+        font-family: v.$fuente-titulo;
+        color: v.$color-principal;
+    }
 
-.contacto label {
-    font-weight: bold;
-    text-align: left;
-}
+    // Texto introductorio
+    .texto-contacto {
+        font-size: 18px;
+        margin-bottom: 20px;
+        font-family: v.$fuente-base;
+        color: v.$color-texto;
+    }
 
-.contacto input,
-.contacto textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+    // Contenedor del formulario
+    .contacto {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: v.$radioborde;
+        box-shadow: v.$sombra-suave;
 
-.contacto button {
-    background-color: #D68C63;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
 
-.contacto button:hover {
-    background-color: #d69c7c;
+            label {
+                font-weight: bold;
+                text-align: left;
+                font-family: v.$fuente-base;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-family: v.$fuente-base;
+            }
+
+            button {
+                background-color: v.$color-principal;
+                border: none;
+                padding: 10px 20px;
+                font-size: 18px;
+                border-radius: 5px;
+                font-weight: bold;
+                color: white;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: v.$color-acento;
+                }
+            }
+        }
+    }
 }

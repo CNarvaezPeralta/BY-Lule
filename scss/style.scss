@@ -1,9 +1,9 @@
 
 /* Temas y fuentes */
 @use 'temas/fuentes';
-
-/* Variables */
-@use 'temas/variables';
+@use 'temas/variables' as v;
+@use 'temas/mixins' as m;
+@use 'temas/animaciones';
 
 /* Estilos generales */
 @use 'generales/reset';

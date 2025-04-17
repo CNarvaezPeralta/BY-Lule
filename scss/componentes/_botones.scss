@@ -1,13 +1,8 @@
-.btn-primary {
-    background-color: #D68C63;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    border-radius: 5px;
-    font-weight: bold;
-}
+@use '../temas/variables' as v;
+@use '../temas/mixins' as m;
 
-.btn-primary:hover {
-    background-color: #d59f83;
-    cursor: pointer;
+// ===================== BOTONES =====================
+
+.btn-primary {
+    @include m.btn-style(v.$color-principal, v.$color-acento);
 }

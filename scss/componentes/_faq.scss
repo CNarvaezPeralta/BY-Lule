@@ -1,49 +1,60 @@
-// Estilos FAQ
+@use '../temas/variables' as v;
 
-// Sección principal
+// ===================== FAQ =====================
+
 .faq-main {
     width: 80%;
     margin: 50px auto;
     padding: 20px 0;
     text-align: center;
-}
+    animation: fadeInCustom 1s ease forwards;
 
-.faq-title {
-    margin-bottom: 30px;
-}
+    // Título principal de la sección FAQ
+    .faq-title {
+        margin-bottom: 30px;
+        font-family: v.$fuente-titulo;
+        color: v.$color-principal;
+    }
 
-// Contenedor de preguntas
-.faq-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
+    // Contenedor de todas las preguntas
+    .faq-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
 
-// Estilos para cada pregunta
-.faq-item {
-    width: 80%;
-    text-align: center;
-    padding-bottom: 15px;
-}
+        // Cada pregunta individual
+        .faq-item {
+            width: 80%;
+            text-align: center;
+            padding-bottom: 15px;
+            background: white;
+            border-radius: v.$radioborde;
+            box-shadow: v.$sombra-suave;
+            padding: 20px;
 
-.faq-item h3 {
-    margin-bottom: 5px;
-    text-align: center;
-}
+            h3 {
+                margin-bottom: 5px;
+                color: v.$color-principal;
+                font-family: v.$fuente-titulo;
+                font-size: 24px;
+            }
 
-.faq-item p {
-    text-align: center;
-    width: 100%;
-}
+            p {
+                color: v.$color-texto;
+                font-family: v.$fuente-base;
+                line-height: 1.6;
+            }
 
-// Enlaces dentro de las respuestas
-.faq-item a {
-    color: #D68C63;
-    font-weight: bold;
-    text-decoration: none;
-}
+            a {
+                color: v.$color-principal;
+                font-weight: bold;
+                text-decoration: none;
 
-.faq-item a:hover {
-    text-decoration: underline;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 }

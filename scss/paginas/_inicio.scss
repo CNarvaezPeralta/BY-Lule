@@ -5,10 +5,12 @@
 
 // Contenedor del carrusel de imágenes
 .carousel-container {
-    width: 80%;
+    width: 100vw;
     margin: auto;
     padding-bottom: 50px;
+    overflow: hidden;
 }
+
 
 // Sección de llamado a la acción (CTA)
 .call-to-action {

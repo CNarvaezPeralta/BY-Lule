@@ -337,9 +337,10 @@ p {
 
 /* Estilos por página */
 .carousel-container {
-  width: 80%;
+  width: 100vw;
   margin: auto;
   padding-bottom: 50px;
+  overflow: hidden;
 }
 
 .call-to-action {

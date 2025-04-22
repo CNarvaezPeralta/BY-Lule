@@ -1,0 +1,41 @@
+@use '../temas/variables' as v;
+
+// ===================== PRODUCTOS =====================
+
+.bolso {
+    text-align: center;
+
+    .img-container {
+        overflow: hidden;
+        border-radius: 10px;
+        transition: transform 0.4s ease;
+    }
+
+    &:hover .img-container {
+        transform: scale(1.05);
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-family: v.$fuente-titulo; // o la fuente que uses
+        color: v.$color-principal; // o tu color de títulos
+    }
+
+    p {
+        font-family: v.$fuente-base;
+        color: v.$color-texto;
+    }
+
+    .precio {
+        font-weight: bold;
+        color: v.$color-principal;
+    }
+}

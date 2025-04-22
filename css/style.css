@@ -303,6 +303,38 @@ p {
   background-color: #d59f83;
 }
 
+.bolso {
+  text-align: center;
+}
+.bolso .img-container {
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+.bolso:hover .img-container {
+  transform: scale(1.05);
+}
+.bolso img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.bolso h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
+  color: #D68C63;
+}
+.bolso p {
+  font-family: "Karla", sans-serif;
+  color: #7b7979;
+}
+.bolso .precio {
+  font-weight: bold;
+  color: #D68C63;
+}
+
 /* Estilos por página */
 .carousel-container {
   width: 80%;

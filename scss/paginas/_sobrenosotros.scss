@@ -1,0 +1,60 @@
+@use '../temas/variables' as v;
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+
+    img {
+        width: 100%;
+        border-radius: v.$radioborde;
+        max-width: 600px;
+    }
+
+    .text {
+        width: 100%;
+        font-family: v.$fuente-base;
+        color: v.$color-texto;
+        text-align: center;
+    }
+
+    h2 {
+        font-family: v.$fuente-titulo;
+        color: v.$color-principal;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+
+// === Media queries ===
+@media (min-width: 768px) {
+    .section {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        justify-content: space-between;
+        max-width: 1200px;
+
+        img {
+            width: 45%;
+        }
+
+        .text {
+            width: 50%;
+            padding-left: 30px;
+        }
+
+        &.reverse {
+            flex-direction: row-reverse;
+
+            .text {
+                padding-left: 0;
+                padding-right: 30px;
+            }
+        }
+    }
+}

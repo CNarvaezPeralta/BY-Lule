@@ -5,10 +5,11 @@
 
 // Contenedor del carrusel de imágenes
 .carousel-container {
-    width: 100vw;
-    margin: auto;
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
     padding-bottom: 50px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 

@@ -1,3 +1,5 @@
+@use '../temas/variables' as v;
+
 // Estilos generales
 body {
     font-family: Arial, sans-serif;
@@ -8,10 +10,12 @@ body {
 
 // Estilos de los títulos y párrafos
 h2 {
-    color: #D68C63;
-    font-family: playfair display;
+    text-align: center;
+    color: v.$color-principal;
+    font-family: v.$fuente-titulo;
     font-size: 28px;
     font-weight: bold;
+    margin-bottom: 30px;
 }
 
 h3 {

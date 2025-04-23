@@ -47,6 +47,21 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #FAF8F3;
@@ -55,10 +70,12 @@ body {
 }
 
 h2 {
+  text-align: center;
   color: #D68C63;
-  font-family: playfair display;
+  font-family: "Playfair Display", serif;
   font-size: 28px;
   font-weight: bold;
+  margin-bottom: 30px;
 }
 
 h3 {
@@ -73,41 +90,10 @@ p {
   line-height: 1.6;
 }
 
-@media (min-width: 768px) {
-  .section {
-    flex-direction: row;
-    text-align: left;
-  }
-  .reverse {
-    flex-direction: row-reverse;
-  }
-  .section img {
-    width: 45%;
-  }
-  .text {
-    width: 50%;
-  }
-  .bolsos-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .contacto-main,
-  .faq-main {
-    width: 70%;
-  }
-}
-@media (min-width: 1024px) {
-  .bolsos-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .contacto-main,
-  .faq-main {
-    width: 50%;
-  }
-}
 /* Estructura del sitio */
 .navbar {
   background-color: #F6E6D6;
-  font-family: "Poppins", sans-serif;
+  font-family: "Playfair Display", serif;
 }
 .navbar .container-fluid {
   display: flex;
@@ -335,12 +321,20 @@ p {
   color: #D68C63;
 }
 
+.bolsos-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  padding: 20px;
+}
+
 /* Estilos por página */
 .carousel-container {
-  width: 100vw;
-  margin: auto;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0 auto;
   padding-bottom: 50px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .call-to-action {
@@ -418,6 +412,89 @@ p {
 }
 .contacto-main .contacto form button:hover {
   background-color: #d59f83;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin: 50px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+.section img {
+  width: 100%;
+  border-radius: 10px;
+  max-width: 600px;
+}
+.section .text {
+  width: 100%;
+  font-family: "Karla", sans-serif;
+  color: #7b7979;
+  text-align: center;
+}
+.section h2 {
+  font-family: "Playfair Display", serif;
+  color: #D68C63;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .section {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    justify-content: space-between;
+    max-width: 1200px;
+  }
+  .section img {
+    width: 45%;
+  }
+  .section .text {
+    width: 50%;
+    padding-left: 30px;
+  }
+  .section.reverse {
+    flex-direction: row-reverse;
+  }
+  .section.reverse .text {
+    padding-left: 0;
+    padding-right: 30px;
+  }
+}
+/* Media Queries */
+@media (min-width: 768px) {
+  .section {
+    flex-direction: row;
+    text-align: left;
+  }
+  .reverse {
+    flex-direction: row-reverse;
+  }
+  .section img {
+    width: 45%;
+  }
+  .text {
+    width: 50%;
+  }
+  .bolsos-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contacto-main,
+  .faq-main {
+    width: 70%;
+  }
+}
+@media (min-width: 1024px) {
+  .bolsos-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .contacto-main,
+  .faq-main {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

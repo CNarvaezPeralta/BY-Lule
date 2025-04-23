@@ -39,3 +39,11 @@
         color: v.$color-principal;
     }
 }
+
+.bolsos-container {
+    display: grid;
+    grid-template-columns: 1fr; // 1 columna para mobile
+    gap: 30px;
+    padding: 20px;
+}
+

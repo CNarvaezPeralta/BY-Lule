@@ -8,7 +8,7 @@
 /* Estilos generales */
 @use 'generales/reset';
 @use 'generales/tipografia';
-@use 'generales/media';
+
 
 /* Estructura del sitio */
 @use 'estructura/header';
@@ -24,3 +24,8 @@
 /* Estilos por página */
 @use 'paginas/inicio';
 @use 'paginas/contacto';
+@use 'paginas/sobrenosotros';
+
+/* Media Queries */
+@use 'generales/media';
+
